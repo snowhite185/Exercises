@@ -16,9 +16,13 @@ class Dice {
         }
         val diceNo = Random.nextInt(1, 7)
         println("Your dice shows : $diceNo")
-        if (diceNo == 6 && maxRoll < 3) {
-            maxRoll++
-            roll()
+        if (diceNo == 6) {
+            if (maxRoll < 3) {
+                maxRoll++
+                roll()
+            } else {
+                maxRoll = 0
+            }
         }
     }
 
