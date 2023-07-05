@@ -14,15 +14,18 @@ class Dice {
             println("Rolling......")
             delay(1000)
         }
-        val diceNo = Random.nextInt(1, 7)
+        val diceNo = 6
         println("Your dice shows : $diceNo")
         if (diceNo == 6) {
-            if (maxRoll < 3) {
+            println("Max Roll : $maxRoll")
+            if (maxRoll >= 3) {
+                maxRoll = 0
+            } else {
                 maxRoll++
                 roll()
-            } else {
-                maxRoll = 0
             }
+
+
         }
     }
 
