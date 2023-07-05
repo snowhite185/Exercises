@@ -7,17 +7,17 @@ import kotlin.random.nextInt
 
 class Dice {
 
-    private var MAX_ROLL = 0
+    private var maxRoll = 0
 
     fun roll() {
         runBlocking {
             println("Rolling......")
             delay(1000)
         }
-        val diceNo = Random.nextInt(1, 6)
+        val diceNo = Random.nextInt(1, 7)
         println("Your dice shows : $diceNo")
-        if (diceNo == 6 && MAX_ROLL < 3) {
-            MAX_ROLL++
+        if (diceNo == 6 && maxRoll < 3) {
+            maxRoll++
             roll()
         }
     }
